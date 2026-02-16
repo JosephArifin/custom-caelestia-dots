@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "fzf-lua": {
+      "rev": "0284d640fd88c56f100a43f41103c5b564699e15",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "mason.nvim": {
+      "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "nvim": {
+      "rev": "193e123cdbc4dd3e86db883d55349e9587f0ded6",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "a2bd1cf7b0446a7414aaf373cea5e4ca804c9c69",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    }
+  }
+}

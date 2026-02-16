@@ -1,0 +1,54 @@
+return {
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  config = function()
+    local config = {
+      sections = {
+        lualine_a = {
+          {
+            'mode',
+            fmt = function(str)
+              local mode_map = {
+                ['NORMAL'] = 'N',
+                ['INSERT'] = 'I',
+                ['VISUAL'] = 'V',
+                ['V-LINE'] = 'V-L',
+                ['V-BLOCK'] = 'V-B',
+                ['REPLACE'] = 'R',
+                ['COMMAND'] = 'C',
+                ['TERMINAL'] = 'T',
+                ['SELECT'] = 'S',
+                ['S-LINE'] = 'S-L',
+                ['S-BLOCK'] = 'S-B',
+              }
+              return mode_map[str] or str
+            end,
+          },
+        },
+        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'encoding', 'fileformat', 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' },
+      },
+    }
+
+    -- Add trouble symbols to lualine_c
+    local trouble = require 'trouble'
+    local symbols = trouble.statusline {
+      mode = 'lsp_document_symbols',
+      groups = {},
+      title = false,
+      filter = { range = true },
+      format = '{kind_icon}{symbol.name:Normal}',
+      hl_group = 'lualine_c_normal',
+    }
+
+    table.insert(config.sections.lualine_c, {
+      symbols.get,
+      cond = symbols.has,
+    })
+
+    require('lualine').setup(config)
+  end,
+}
