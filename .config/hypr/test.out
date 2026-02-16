@@ -1,0 +1,846 @@
+Hyprland 0.53.1 built from branch v0.53.1 at commit ab1d80f3d6aebd57a0971b53a1993b1c1dfe0b09 clean (version: bump to 0.53.1).
+Date: Fri Jan 2 21:20:57 2026
+Tag: v0.53.1, commits: 6766
+
+Libraries:
+Hyprgraphics: built against 0.5.0, system has 0.5.0
+Hyprutils: built against 0.11.0, system has 0.11.0
+Hyprcursor: built against 0.1.13, system has 0.1.13
+Hyprlang: built against 0.6.7, system has 0.6.8
+Aquamarine: built against 0.10.0, system has 0.10.0
+
+Version ABI string: ab1d80f3d6aebd57a0971b53a1993b1c1dfe0b09_aq_0.10_hu_0.11_hg_0.5_hc_0.1_hlg_0.6
+no flags were set
+
+
+System Information:
+System name: Linux
+Node name: jarchie
+Release: 6.18.3-arch1-1
+Version: #1 SMP PREEMPT_DYNAMIC Fri, 02 Jan 2026 17:52:55 +0000
+
+Libraries:
+Hyprgraphics: built against 0.5.0, system has 0.5.0
+Hyprutils: built against 0.11.0, system has 0.11.0
+Hyprcursor: built against 0.1.13, system has 0.1.13
+Hyprlang: built against 0.6.7, system has 0.6.8
+Aquamarine: built against 0.10.0, system has 0.10.0
+
+
+
+GPU information: 
+00:02.0 VGA compatible controller [0300]: Intel Corporation Raptor Lake-P [Iris Xe Graphics] [8086:a7a0] (rev 04) (prog-if 00 [VGA controller])
+
+
+os-release: NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo
+
+
+plugins:
+
+Explicit sync: supported
+GL ver: 3.2
+Backend: drm
+
+Monitor info:
+	Panel eDP-1: 2560x1600, eDP-1 LG Display 0x06EA  -> backend drm
+		explicit ✔️
+		edid:
+			hdr ✔️
+			chroma ✔️
+			bt2020 ✔️
+		vrr capable ❌
+		non-desktop ❌
+		
+	Panel HDMI-A-1: 2560x1440, HDMI-A-1 Samsung Electric Company Odyssey G5 HNBY600897 -> backend drm
+		explicit ✔️
+		edid:
+			hdr ✔️
+			chroma ✔️
+			bt2020 ✔️
+		vrr capable ❌
+		non-desktop ❌
+		
+======Config-Start======
+
+
+Config File: /home/joseph/.config/hypr/hyprland.conf: Read Succeeded
+$hypr = ~/.config/hypr
+$hl = $hypr/hyprland
+
+# Variables (colours + other vars)
+exec = cp -L --no-preserve=mode --update=none $hypr/scheme/default.conf $hypr/scheme/current.conf
+source = $hypr/scheme/current.conf
+source = $hypr/variables.conf
+
+# Default monitor conf
+monitor = , preferred, auto-up, 1
+
+# Configs
+source = $hl/env.conf
+source = $hl/general.conf
+source = $hl/input.conf
+source = $hl/misc.conf
+source = $hl/animations.conf
+source = $hl/decoration.conf
+source = $hl/group.conf
+source = $hl/execs.conf
+source = $hl/rules.conf
+source = $hl/gestures.conf
+source = $hl/keybinds.conf
+
+# monitor = HDMI-A-1, 1280x720@144, auto-up, 0.5
+
+
+Config File: /home/joseph/.config/hypr/scheme/current.conf: Read Succeeded
+$primary_paletteKeyColor = 8b6aa3
+$secondary_paletteKeyColor = 807288
+$tertiary_paletteKeyColor = 9d6a6d
+$neutral_paletteKeyColor = 7b757c
+$neutral_variant_paletteKeyColor = 7c757e
+$background = 161217
+$onBackground = e8e0e8
+$surface = 161217
+$surfaceDim = 161217
+$surfaceBright = 3c383e
+$surfaceContainerLowest = 100d12
+$surfaceContainerLow = 1e1a20
+$surfaceContainer = 221e24
+$surfaceContainerHigh = 2d292e
+$surfaceContainerHighest = 383339
+$onSurface = e8e0e8
+$surfaceVariant = 4b454d
+$onSurfaceVariant = cdc3ce
+$inverseSurface = e8e0e8
+$inverseOnSurface = 332f35
+$outline = 968e98
+$outlineVariant = 4b454d
+$shadow = 000000
+$scrim = 000000
+$surfaceTint = deb8f7
+$primary = deb8f7
+$onPrimary = 412357
+$primaryContainer = 583a6f
+$onPrimaryContainer = f3daff
+$inversePrimary = 715188
+$secondary = d2c1d9
+$onSecondary = 372c3f
+$secondaryContainer = 4e4256
+$onSecondaryContainer = eedcf5
+$tertiary = f4b7ba
+$onTertiary = 4c2528
+$tertiaryContainer = b98386
+$onTertiaryContainer = 000000
+$error = ffb4ab
+$onError = 690005
+$errorContainer = 93000a
+$onErrorContainer = ffdad6
+$primaryFixed = f3daff
+$primaryFixedDim = deb8f7
+$onPrimaryFixed = 2a0c40
+$onPrimaryFixedVariant = 583a6f
+$secondaryFixed = eedcf5
+$secondaryFixedDim = d2c1d9
+$onSecondaryFixed = 221729
+$onSecondaryFixedVariant = 4e4256
+$tertiaryFixed = ffdadb
+$tertiaryFixedDim = f4b7ba
+$onTertiaryFixed = 331014
+$onTertiaryFixedVariant = 663b3e
+$term0 = 353434
+$term1 = e14ef8
+$term2 = ffbac2
+$term3 = ffdcf2
+$term4 = aba5d7
+$term5 = cd97dc
+$term6 = 9dceff
+$term7 = e8d3de
+$term8 = ae9ea8
+$term9 = f178ff
+$term10 = ffd2d5
+$term11 = fff0f6
+$term12 = babfdd
+$term13 = dfafe8
+$term14 = bae0ff
+$term15 = ffffff
+$rosewater = fbeef6
+$flamingo = f1dbee
+$pink = f3d1ff
+$mauve = dbaeff
+$red = dd9deb
+$maroon = dcb0e1
+$peach = f3bdea
+$yellow = ffecf3
+$green = c8e3ff
+$teal = dedcff
+$sky = ded6ff
+$sapphire = cdbeff
+$blue = ccafff
+$lavender = dcc1ff
+$klink = 9279cc
+$klinkSelection = 9179cc
+$kvisited = a268c9
+$kvisitedSelection = a268ca
+$knegative = c858dd
+$knegativeSelection = c759de
+$kneutral = f57df1
+$kneutralSelection = f57df2
+$kpositive = 60adff
+$kpositiveSelection = 60adff
+$text = e8e0e8
+$subtext1 = cdc3ce
+$subtext0 = 968e98
+$overlay2 = 837b85
+$overlay1 = 6f6871
+$overlay0 = 5e575f
+$surface2 = 4c464d
+$surface1 = 3b363c
+$surface0 = 282429
+$base = 161217
+$mantle = 161217
+$crust = 151116
+$success = B5CCBA
+$onSuccess = 213528
+$successContainer = 374B3E
+$onSuccessContainer = D1E9D6
+
+
+Config File: /home/joseph/.config/hypr/variables.conf: Read Succeeded
+# ### Hyprland ###
+# Apps
+$terminal = kitty
+$browser = zen-browser
+$editor = codium
+$fileExplorer = nautilus
+
+# Touchpad
+$touchpadDisableTyping = true
+$touchpadScrollFactor = 0.3
+$touchpadSensitivity = 1
+$workspaceSwipeFingers = 4
+$gestureFingers = 3
+$gestureFingersMore = 4
+
+# Mouse sensi
+$extMouseSensitivity = -0.2
+
+# Blur
+$blurEnabled = true
+$blurSpecialWs = false
+$blurPopups = true
+$blurInputMethods = true
+$blurSize = 8
+$blurPasses = 2
+$blurXray = false
+
+# Shadow
+$shadowEnabled = true
+$shadowRange = 20
+$shadowRenderPower = 3
+$shadowColour = rgba($surfaced4)
+
+# Gaps
+$workspaceGaps = 20
+$windowGapsIn = 6
+$windowGapsOut = 12
+$singleWindowGapsOut = 12
+
+# Window styling
+$windowOpacity = 0.95
+$windowRounding = 10
+
+$windowBorderSize = 3
+$activeWindowBorderColour = rgba($primarye6)
+$inactiveWindowBorderColour = rgba($onSurfaceVariant11)
+
+# Misc
+$volumeStep = 5  # In percent
+$cursorTheme = sweet-cursors
+$cursorSize = 24
+
+
+# ### Keybinds ###
+# Workspaces
+$kbMoveWinToWs = Alt
+$kbMoveWinToWsGroup = Ctrl+Super+Alt
+$kbGoToWs = Alt
+$kbGoToWsGroup = Ctrl+Super
+
+$kbNextWs = Ctrl+Super, right
+$kbPrevWs = Ctrl+Super, left
+
+$kbToggleSpecialWs = Super, S
+
+# Window groups
+$kbWindowGroupCycleNext = Alt, Tab
+$kbWindowGroupCyclePrev = Shift+Alt, Tab
+$kbUngroup = Super, U
+$kbToggleGroup = Super, Comma
+
+# Window actions
+$kbMoveWindow = Super, Z
+$kbResizeWindow = Super, X
+$kbWindowPip = Super+Alt, Backslash
+$kbPinWindow = Super, P
+$kbWindowFullscreen = Ctrl+Alt, F
+$kbWindowBorderedFullscreen = Shift+Alt, F
+$kbToggleWindowFloating = Shift+Alt, t
+$kbCloseWindow = Shift+Alt, Q
+
+# Special workspace toggles
+$kbSystemMonitor = Ctrl+Shift, Escape
+$kbMusic = Super, M
+$kbCommunication = Super, D
+$kbTodo = Super, R
+
+# Apps
+$kbTerminal = Super, T
+$kbBrowser = Super, W
+$kbEditor = Super, C
+$kbFileExplorer = Super, E
+
+# Misc
+$kbSession = Ctrl+Alt, Delete
+$kbClearNotifs = Ctrl+Alt, C
+$kbShowPanels = Super, K
+$kbLock = Super, L
+$kbRestoreLock = Super+Alt, L
+
+
+Config File: /home/joseph/.config/hypr/hyprland/env.conf: Read Succeeded
+# ############# Themes #############
+env = QT_QPA_PLATFORMTHEME, qt6ct
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION, 1
+env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
+env = XCURSOR_THEME, $cursorTheme
+env = XCURSOR_SIZE, $cursorSize
+
+# ######## Toolkit backends ########
+env = GDK_BACKEND, wayland,x11
+env = QT_QPA_PLATFORM, wayland;xcb
+env = SDL_VIDEODRIVER, wayland,x11,windows
+env = CLUTTER_BACKEND, wayland
+env = ELECTRON_OZONE_PLATFORM_HINT, auto
+
+# ####### XDG specifications #######
+env = XDG_CURRENT_DESKTOP, Hyprland
+env = XDG_SESSION_TYPE, wayland
+env = XDG_SESSION_DESKTOP, Hyprland
+
+# ############# Others #############
+env = _JAVA_AWT_WM_NONREPARENTING, 1
+
+
+Config File: /home/joseph/.config/hypr/hyprland/general.conf: Read Succeeded
+general {
+    layout = dwindle
+
+    allow_tearing = false  # Allows `immediate` window rule to work
+
+    gaps_workspaces = $workspaceGaps
+    gaps_in = $windowGapsIn
+    gaps_out = $windowGapsOut
+    border_size = $windowBorderSize
+
+    col.active_border = $activeWindowBorderColour
+    col.inactive_border = $inactiveWindowBorderColour
+}
+
+dwindle {
+	preserve_split = true
+	smart_split = false
+	smart_resizing = true
+}
+
+
+Config File: /home/joseph/.config/hypr/hyprland/input.conf: Read Succeeded
+input {
+    kb_layout = us
+    numlock_by_default = false
+    repeat_delay = 250
+    repeat_rate = 35
+
+    focus_on_close = 1
+
+    touchpad {
+        natural_scroll = true
+        disable_while_typing = $touchpadDisableTyping
+        scroll_factor = $touchpadScrollFactor
+    }
+}
+
+binds {
+    scroll_event_delay = 0
+}
+
+cursor {
+    hotspot_padding = 1
+}
+
+device {
+    name = logi-m240-mouse
+    sensitivity = $extMouseSensitivity
+}
+
+
+
+
+Config File: /home/joseph/.config/hypr/hyprland/misc.conf: Read Succeeded
+misc {
+    vfr = true
+    vrr = 1
+
+    animate_manual_resizes = false
+    animate_mouse_windowdragging = false
+
+    disable_hyprland_logo = true
+    force_default_wallpaper = 0
+
+    on_focus_under_fullscreen = 2
+    allow_session_lock_restore = true
+    middle_click_paste = false
+    focus_on_activate = true
+    session_lock_xray = true
+
+    mouse_move_enables_dpms = true
+    key_press_enables_dpms = true
+
+	background_color = rgb($surfaceContainer)
+}
+
+debug {
+    error_position = 1
+}
+
+
+Config File: /home/joseph/.config/hypr/hyprland/animations.conf: Read Succeeded
+animations {
+    enabled = true
+
+    # Animation curves
+    bezier = specialWorkSwitch, 0.05, 0.7, 0.1, 1
+    bezier = emphasizedAccel, 0.3, 0, 0.8, 0.15
+    bezier = emphasizedDecel, 0.05, 0.7, 0.1, 1
+    bezier = standard, 0.2, 0, 0, 1
+
+    # Animation configs
+    animation = layersIn, 1, 5, emphasizedDecel, slide
+    animation = layersOut, 1, 4, emphasizedAccel, slide
+    animation = fadeLayers, 1, 5, standard
+
+    animation = windowsIn, 1, 5, emphasizedDecel
+    animation = windowsOut, 1, 3, emphasizedAccel
+    animation = windowsMove, 1, 6, standard
+    animation = workspaces, 1, 5, standard
+
+    animation = specialWorkspace, 1, 4, specialWorkSwitch, slidefadevert 15%
+
+    animation = fade, 1, 6, standard
+    animation = fadeDim, 1, 6, standard
+    animation = border, 1, 6, standard
+}
+
+
+Config File: /home/joseph/.config/hypr/hyprland/decoration.conf: Read Succeeded
+decoration {
+    rounding = $windowRounding
+
+    blur {
+        enabled = $blurEnabled
+        xray = $blurXray
+        special = $blurSpecialWs
+        ignore_opacity = true  # Allows opacity blurring
+        new_optimizations = true
+        popups = $blurPopups
+        input_methods = $blurInputMethods
+        size = $blurSize
+        passes = $blurPasses
+    }
+
+    shadow {
+        enabled = $shadowEnabled
+        range = $shadowRange
+        render_power = $shadowRenderPower
+        color = $shadowColour
+    }
+}
+
+
+Config File: /home/joseph/.config/hypr/hyprland/group.conf: Read Succeeded
+group {
+    col.border_active = $activeWindowBorderColour
+    col.border_inactive = $inactiveWindowBorderColour
+    col.border_locked_active = $activeWindowBorderColour
+    col.border_locked_inactive = $inactiveWindowBorderColour
+
+    groupbar {
+        font_family = JetBrains Mono NF
+        font_size = 15
+        gradients = true
+        gradient_round_only_edges = false
+        gradient_rounding = 5
+        height = 25
+        indicator_height = 0
+        gaps_in = 3
+        gaps_out = 3
+
+        text_color = rgb($onPrimary)
+        col.active = rgba($primaryd4)
+        col.inactive = rgba($outlined4)
+        col.locked_active = rgba($primaryd4)
+        col.locked_inactive = rgba($secondaryd4)
+    }
+}
+
+
+Config File: /home/joseph/.config/hypr/hyprland/execs.conf: Read Succeeded
+# Keyring and auth
+exec-once = gnome-keyring-daemon --start --components=secrets
+exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Clipboard history
+exec-once = wl-paste --type text --watch cliphist store
+exec-once = wl-paste --type image --watch cliphist store
+
+# Auto delete trash 30 days old
+exec-once = trash-empty 30
+
+# Cursors
+exec-once = hyprctl setcursor $cursorTheme $cursorSize
+exec-once = gsettings set org.gnome.desktop.interface cursor-theme '$cursorTheme'
+exec-once = gsettings set org.gnome.desktop.interface cursor-size $cursorSize
+
+# Location provider and night light
+exec-once = /usr/lib/geoclue-2.0/demos/agent
+exec-once = sleep 1 && gammastep
+
+# Forward bluetooth media commands to MPRIS
+exec-once = mpris-proxy
+
+# Resize and move windows based on matches (e.g. pip)
+exec-once = caelestia resizer -d
+
+# Start shell
+exec-once = caelestia shell -d
+
+
+Config File: /home/joseph/.config/hypr/hyprland/rules.conf: Read Succeeded
+# ######## Window rules ########
+windowrule = opacity $windowOpacity override, match:fullscreen false
+
+windowrule = opaque true, match:class foot|equibop|org\.quickshell|imv|swappy  # They use native transparency or we want them opaque
+windowrule = center true, match:float true, match:xwayland false  # Center all floating windows (not xwayland cause popups)
+
+# Float
+windowrule = float true, match:class guifetch  # FlafyDev/guifetch
+windowrule = float true, match:class yad
+windowrule = float true, match:class zenity
+windowrule = float true, match:class wev
+windowrule = float true, match:class org\.gnome\.FileRoller
+windowrule = float true, match:class file-roller  # WHY IS THERE TWOOOOOOOOOOOOOOOO
+windowrule = float true, match:class blueman-manager
+windowrule = float true, match:class com\.github\.GradienceTeam\.Gradience
+windowrule = float true, match:class feh
+windowrule = float true, match:class imv
+windowrule = float true, match:class system-config-printer
+windowrule = float true, match:class org\.quickshell
+
+# Float, resize and center
+windowrule = float true, match:class foot, match:title nmtui
+windowrule = size 60% 70%, match:class foot, match:title nmtui
+windowrule = center 1, match:class foot, match:title nmtui
+windowrule = float true, match:class org\.gnome\.Settings
+windowrule = size 70% 80%, match:class org\.gnome\.Settings
+windowrule = center 1, match:class org\.gnome\.Settings
+windowrule = float true, match:class org\.pulseaudio\.pavucontrol|yad-icon-browser
+windowrule = size 60% 70%, match:class org\.pulseaudio\.pavucontrol|yad-icon-browser
+windowrule = center 1, match:class org\.pulseaudio\.pavucontrol|yad-icon-browser
+windowrule = float true, match:class nwg-look
+windowrule = size 50% 60%, match:class nwg-look
+windowrule = center 1, match:class nwg-look
+
+# Special workspaces
+windowrule = workspace special:sysmon, match:class btop
+windowrule = workspace special:music, match:class feishin|Spotify|Supersonic|Cider
+windowrule = workspace special:music, match:initial_title Spotify( Free)?  # Spotify wayland, it has no class for some reason
+windowrule = workspace special:communication, match:class discord|equibop|vesktop|whatsapp
+windowrule = workspace special:todo, match:class Todoist
+
+# Dialogs
+windowrule = float true, match:title (Select|Open)( a)? (File|Folder)(s)?
+windowrule = float true, match:title File (Operation|Upload)( Progress)?
+windowrule = float true, match:title .* Properties
+windowrule = float true, match:title Export Image as PNG
+windowrule = float true, match:title GIMP Crash Debug
+windowrule = float true, match:title Save As
+windowrule = float true, match:title Library
+
+# Picture in picture (resize and move done via script)
+windowrule = move 100%-w-2% 100%-w-3%, match:title Picture(-| )in(-| )[Pp]icture  # Initial move so window doesn't shoot across the screen from the center
+windowrule = keep_aspect_ratio true, match:title Picture(-| )in(-| )[Pp]icture
+windowrule = float true, match:title Picture(-| )in(-| )[Pp]icture
+windowrule = pin true, match:title Picture(-| )in(-| )[Pp]icture
+
+# Steam
+windowrule = rounding 10, match:class steam
+windowrule = float true, match:title Friends List, match:class steam
+windowrule = immediate true, match:class steam_app_[0-9]+  # Allow tearing for steam games
+windowrule = idle_inhibit always, match:class steam_app_[0-9]+  # Always idle inhibit when playing a steam game
+
+# ATLauncher console
+windowrule = float true, match:class com-atlauncher-App, match:title ATLauncher Console
+
+# Autodesk Fusion 360
+windowrule = no_blur true, match:title Fusion360|(Marking Menu), match:class fusion360\.exe
+
+# Ugh xwayland popups
+windowrule = no_dim true, match:xwayland 1, match:title win[0-9]+
+windowrule = no_shadow true, match:xwayland 1, match:title win[0-9]+
+windowrule = rounding 10, match:xwayland 1, match:title win[0-9]+
+
+# ######## Workspace rules ########
+workspace = w[tv1]s[false], gapsout:$singleWindowGapsOut
+workspace = f[1]s[false], gapsout:$singleWindowGapsOut
+
+# ######## Layer rules ########
+layerrule = animation fade, match:namespace hyprpicker  # Colour picker out animation
+layerrule = animation fade, match:namespace logout_dialog  # wlogout
+layerrule = animation fade, match:namespace selection  # slurp
+layerrule = animation fade, match:namespace wayfreeze
+
+# Fuzzel
+layerrule = animation popin 80%, match:namespace launcher
+layerrule = blur true, match:namespace launcher
+
+# Shell
+layerrule = no_anim true, match:namespace caelestia-(border-exclusion|area-picker)
+layerrule = animation fade, match:namespace caelestia-(drawers|background)
+
+layerrule = blur true, match:namespace caelestia-drawers
+layerrule = ignore_alpha 0.57, match:namespace caelestia-drawers
+
+
+Config File: /home/joseph/.config/hypr/hyprland/gestures.conf: Read Succeeded
+gestures {
+    workspace_swipe_distance = 700
+    workspace_swipe_cancel_ratio = 0.15
+    workspace_swipe_min_speed_to_force = 5
+    workspace_swipe_direction_lock = true
+    workspace_swipe_direction_lock_threshold = 10
+    workspace_swipe_create_new = true
+}
+
+gesture = $workspaceSwipeFingers, horizontal, workspace
+gesture = $gestureFingers, up, special, special
+gesture = $gestureFingers, down, dispatcher, exec, caelestia toggle specialws
+gesture = $gestureFingersMore, down, dispatcher, exec, systemctl suspend-then-hibernate
+
+
+Config File: /home/joseph/.config/hypr/hyprland/keybinds.conf: Read Succeeded
+exec = hyprctl dispatch submap global
+submap = global
+
+# ## Shell keybinds
+# Launcher
+bindi = Super, Super_L, global, caelestia:launcher
+bindin = Super, catchall, global, caelestia:launcherInterrupt
+bindin = Super, mouse:272, global, caelestia:launcherInterrupt
+bindin = Super, mouse:273, global, caelestia:launcherInterrupt
+bindin = Super, mouse:274, global, caelestia:launcherInterrupt
+bindin = Super, mouse:275, global, caelestia:launcherInterrupt
+bindin = Super, mouse:276, global, caelestia:launcherInterrupt
+bindin = Super, mouse:277, global, caelestia:launcherInterrupt
+bindin = Super, mouse_up, global, caelestia:launcherInterrupt
+bindin = Super, mouse_down, global, caelestia:launcherInterrupt
+
+# Misc
+bind = $kbSession, global, caelestia:session
+bindl = $kbClearNotifs, global, caelestia:clearNotifs
+bind = $kbShowPanels, global, caelestia:showall
+bind = $kbLock, global, caelestia:lock
+
+# Restore lock
+bindl = $kbRestoreLock, exec, caelestia shell -d
+bindl = $kbRestoreLock, global, caelestia:lock
+
+# Brightness
+bindl = , XF86MonBrightnessUp, global, caelestia:brightnessUp
+bindl = , XF86MonBrightnessDown, global, caelestia:brightnessDown
+
+# Media
+bindl = Ctrl+Super, Space, global, caelestia:mediaToggle
+bindl = , XF86AudioPlay, global, caelestia:mediaToggle
+bindl = , XF86AudioPause, global, caelestia:mediaToggle
+bindl = Ctrl+Super, V, global, caelestia:mediaNext
+bindl = , XF86AudioNext, global, caelestia:mediaNext
+bindl = Ctrl+Super, C, global, caelestia:mediaPrev
+bindl = , XF86AudioPrev, global, caelestia:mediaPrev
+bindl = , XF86AudioStop, global, caelestia:mediaStop
+
+# Kill/restart
+bindr = Ctrl+Super+Shift, R, exec, qs -c caelestia kill
+bindr = Ctrl+Super+Alt, R, exec, qs -c caelestia kill; caelestia shell -d
+
+# Go to workspace #
+$wsaction = ~/.config/hypr/scripts/wsaction.fish
+bind = $kbGoToWs, q, exec, $wsaction workspace 1
+bind = $kbGoToWs, w, exec, $wsaction workspace 2
+bind = $kbGoToWs, e, exec, $wsaction workspace 3
+bind = $kbGoToWs, r, exec, $wsaction workspace 4
+bind = $kbGoToWs, t, exec, $wsaction workspace 5
+bind = $kbGoToWs, y, exec, $wsaction workspace 6
+bind = $kbGoToWs, u, exec, $wsaction workspace 7
+bind = $kbGoToWs, i, exec, $wsaction workspace 8
+bind = $kbGoToWs, o, exec, $wsaction workspace 9
+bind = $kbGoToWs, p, exec, $wsaction workspace 10
+
+# Go to workspace group #
+# bind = $kbGoToWsGroup, 1, exec, $wsaction -g workspace 1
+# bind = $kbGoToWsGroup, 2, exec, $wsaction -g workspace 2
+# bind = $kbGoToWsGroup, 3, exec, $wsaction -g workspace 3
+# bind = $kbGoToWsGroup, 4, exec, $wsaction -g workspace 4
+# bind = $kbGoToWsGroup, 5, exec, $wsaction -g workspace 5
+# bind = $kbGoToWsGroup, 6, exec, $wsaction -g workspace 6
+# bind = $kbGoToWsGroup, 7, exec, $wsaction -g workspace 7
+# bind = $kbGoToWsGroup, 8, exec, $wsaction -g workspace 8
+# bind = $kbGoToWsGroup, 9, exec, $wsaction -g workspace 9
+# bind = $kbGoToWsGroup, 0, exec, $wsaction -g workspace 10
+
+# Go to workspace group -1/+1
+# bind = Ctrl+Super, mouse_down, workspace, -10
+# bind = Ctrl+Super, mouse_up, workspace, +10
+# Toggle special workspace
+bind = $kbToggleSpecialWs, exec, caelestia toggle specialws
+
+# Move window to workspace #
+bind = $kbMoveWinToWs, 1, exec, $wsaction movetoworkspace 1
+bind = $kbMoveWinToWs, 2, exec, $wsaction movetoworkspace 2
+bind = $kbMoveWinToWs, 3, exec, $wsaction movetoworkspace 3
+bind = $kbMoveWinToWs, 4, exec, $wsaction movetoworkspace 4
+bind = $kbMoveWinToWs, 5, exec, $wsaction movetoworkspace 5
+bind = $kbMoveWinToWs, 6, exec, $wsaction movetoworkspace 6
+bind = $kbMoveWinToWs, 7, exec, $wsaction movetoworkspace 7
+bind = $kbMoveWinToWs, 8, exec, $wsaction movetoworkspace 8
+bind = $kbMoveWinToWs, 9, exec, $wsaction movetoworkspace 9
+bind = $kbMoveWinToWs, 0, exec, $wsaction movetoworkspace 10
+
+# Move window to workspace group #
+bind = $kbMoveWinToWsGroup, 1, exec, $wsaction -g movetoworkspace 1
+bind = $kbMoveWinToWsGroup, 2, exec, $wsaction -g movetoworkspace 2
+bind = $kbMoveWinToWsGroup, 3, exec, $wsaction -g movetoworkspace 3
+bind = $kbMoveWinToWsGroup, 4, exec, $wsaction -g movetoworkspace 4
+bind = $kbMoveWinToWsGroup, 5, exec, $wsaction -g movetoworkspace 5
+bind = $kbMoveWinToWsGroup, 6, exec, $wsaction -g movetoworkspace 6
+bind = $kbMoveWinToWsGroup, 7, exec, $wsaction -g movetoworkspace 7
+bind = $kbMoveWinToWsGroup, 8, exec, $wsaction -g movetoworkspace 8
+bind = $kbMoveWinToWsGroup, 9, exec, $wsaction -g movetoworkspace 9
+bind = $kbMoveWinToWsGroup, 0, exec, $wsaction -g movetoworkspace 10
+
+# Move window to workspace -1/+1
+# binde = Super+Alt, Page_Up, movetoworkspace, -1
+# binde = Super+Alt, Page_Down, movetoworkspace, +1
+# bind = Super+Alt, mouse_down, movetoworkspace, -1
+# bind = Super+Alt, mouse_up, movetoworkspace, +1
+# binde = Ctrl+Super+Shift, right, movetoworkspace, +1
+# binde = Ctrl+Super+Shift, left, movetoworkspace, -1
+
+# Move window to/from special workspace
+bind = Ctrl+Super+Shift, up, movetoworkspace, special:special
+bind = Ctrl+Super+Shift, down, movetoworkspace, e+0
+bind = Super+Alt, S, movetoworkspace, special:special
+
+# Move workspace to monitor
+bind = Shift+Alt, up, movecurrentworkspacetomonitor, u
+bind = Shift+Alt, down, movecurrentworkspacetomonitor, d
+bind = Shift+Alt, left, movecurrentworkspacetomonitor, l
+bind = Shift+Alt, right, movecurrentworkspacetomonitor, r
+
+# Window groups
+# binde = $kbWindowGroupCycleNext, cyclenext
+# binde = $kbWindowGroupCyclePrev, cyclenext, prev
+# binde = Ctrl+Alt, Tab, changegroupactive, f
+# binde = Ctrl+Shift+Alt, Tab, changegroupactive, b
+# bind = $kbToggleGroup, togglegroup
+# bind = $kbUngroup, moveoutofgroup
+# bind = Super+Shift, Comma, lockactivegroup, toggle
+
+# Window actions
+bind = Alt, a, workspace, previous
+bind = Alt, h, movefocus, l
+bind = Alt, l, movefocus, r
+bind = Alt, k, movefocus, u
+bind = Alt, j, movefocus, d
+bind = Shift+Alt, h, movewindow, l
+bind = Shift+Alt, l, movewindow, r
+bind = Shift+Alt, k, movewindow, u
+bind = Shift+Alt, j, movewindow, d
+binde = Super, Minus, splitratio, -0.1
+binde = Super, Equal, splitratio, 0.1
+bindm = Super, mouse:272, movewindow
+# bindm = $kbMoveWindow, movewindow
+bindm = Super, mouse:273, resizewindow
+# bindm = $kbResizeWindow, resizewindow
+bind = Ctrl+Super, Backslash, centerwindow, 1
+bind = Ctrl+Super+Alt, Backslash, resizeactive, exact 55% 70%
+bind = Ctrl+Super+Alt, Backslash, centerwindow, 1
+bind = $kbWindowPip, exec, caelestia resizer pip  # Move window to picture-in-picture mode
+bind = $kbPinWindow, pin
+bind = $kbWindowFullscreen, fullscreen, 0
+bind = $kbWindowBorderedFullscreen, fullscreen, 1  # Fullscreen with borders
+bind = $kbToggleWindowFloating, togglefloating,
+bind = $kbCloseWindow, killactive,
+
+# Special workspace toggles
+bind = $kbSystemMonitor, exec, caelestia toggle sysmon
+bind = $kbMusic, exec, caelestia toggle music
+bind = $kbCommunication, exec, caelestia toggle communication
+bind = $kbTodo, exec, caelestia toggle todo
+
+# Apps
+bind = $kbTerminal, exec, app2unit -- $terminal
+bind = $kbBrowser, exec, app2unit -- $browser
+# bind = $kbEditor, exec, app2unit -- $editor
+bind = Super, G, exec, app2unit -- github-desktop
+bind = $kbFileExplorer, exec, app2unit -- $fileExplorer
+bind = Super+Alt, E, exec, app2unit -- thunar
+bind = Ctrl+Alt, Escape, exec, app2unit -- qps
+bind = Ctrl+Alt, V, exec, app2unit -- pavucontrol
+
+# Utilities
+bindl = , Print, exec, caelestia screenshot  # Full screen capture > clipboard
+bind = Shift, Print, global, caelestia:screenshotFreeze  # Capture region (freeze)
+bind = Shift+Alt, Print, global, caelestia:screenshot  # Capture region
+bind = Super+Alt, R, exec, caelestia record -s  # Record screen with sound
+bind = Ctrl+Alt, R, exec, caelestia record  # Record screen
+bind = Super+Shift+Alt, R, exec, caelestia record -r  # Record region
+bind = Super+Shift, C, exec, hyprpicker -a  # Colour picker
+
+# Volume
+bindl = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+# bindl = Super+Shift, M, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindle = , XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ $volumeStep%+
+bindle = , XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ $volumeStep%-
+
+# Sleep
+bind = Super+Shift, L, exec, systemctl suspend-then-hibernate
+
+# Clipboard and emoji picker
+bind = Super, V, exec, pkill fuzzel || caelestia clipboard
+bind = Super+Alt, V, exec, pkill fuzzel || caelestia clipboard -d
+bind = Super, Period, exec, pkill fuzzel || caelestia emoji -p
+bindl = Ctrl+Shift+Alt, V, exec, sleep 0.5s && ydotool type -d 1 "$(cliphist list | head -1 | cliphist decode)"  # Alternate paste
+
+# Testing
+bindl = Super+Alt, f12, exec, notify-send -u low -i dialog-information-symbolic 'Test notification' "Here's a really long message to test truncation and wrapping\nYou can middle click or flick this notification to dismiss it!" -a 'Shell' -A "Test1=I got it!" -A "Test2=Another action"
+
+======Config-End========
+
