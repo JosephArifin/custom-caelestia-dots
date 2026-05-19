@@ -1,5 +1,6 @@
 if status is-interactive
-    set -gx NVIM_APPNAME nvim_main/
+    set -gx NVIM_APPNAME nvim/
+    # set -gx NVIM_APPNAME nvim_main/
     set -gx SUDO_EDITOR nvim
 
     # dotfiles alias

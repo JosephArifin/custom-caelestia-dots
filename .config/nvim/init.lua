@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
@@ -27,34 +28,33 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.winborder = "rounded"
 vim.opt.showmode = false
+vim.opt.undofile = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 -- vim.opt.formatoptions:append({"r"})
+
+-- Most important remap
+vim.keymap.set('n', '<Tab>', '<C-6>', { desc = 'Toggle buffers' })
 
 -- yank to clipboard
 vim.schedule(function()
     vim.o.clipboard = "unnamedplus"
 end)
 
-vim.pack.add({
-    { src = "https://github.com/catppuccin/nvim" },
-    { src = "https://github.com/ibhagwan/fzf-lua" },
-    { src = "https://github.com/neovim/nvim-lspconfig" },
-    { src = "https://github.com/mason-org/mason.nvim" },
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
 
--- Colorscheme
-require("catppuccin").setup({
-    transparent_background = true,
-})
-vim.cmd [[colorscheme catppuccin-mocha]]
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Fzf-lua
-require "fzf-lua".setup()
-vim.keymap.set('n', '<leader>sb', ':FzfLua<CR>', { desc = 'FzfLua builtin' })
-vim.keymap.set('n', '<leader>sf', ':FzfLua files<CR>', { desc = 'FzfLua search files' })
-
--- Mason
-require("mason").setup()
-
--- LSP config
-vim.lsp.enable({ 'emmylua_ls' })
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+-- Better split navigation
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })

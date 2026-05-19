@@ -6,6 +6,10 @@ return {
 		config = function()
 			require("catppuccin").setup({
 				transparent_background = true,
+				float = {
+					transparent = true,
+					solid = true,
+				},
 				color_overrides = {
 					frappe = {
 						base = "#1a121f",
@@ -79,42 +83,5 @@ return {
 			})
 			vim.cmd.colorscheme("catppuccin-mocha")
 		end,
-	},
-	-- {
-	--   dir = '/home/josepharifin/projects/lua/plugins/candyland.nvim/',
-	--   priority = 1000,
-	--   config = function()
-	--     -- vim.cmd.colorscheme 'candyland'
-	--   end,
-	-- },
-	{ "Shadorain/shadotheme" },
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			-- vim.cmd 'colorscheme rose-pine'
-		end,
-	},
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-	{ "niyabits/calvera-dark.nvim" },
-	{
-		"vague-theme/vague.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other plugins
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		config = function()
-			require("gruvbox").setup({
-				terminal_colors = true,
-			})
-		end,
-		opts = ...,
 	},
 }

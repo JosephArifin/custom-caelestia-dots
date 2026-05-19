@@ -304,6 +304,9 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 		bigfile = { enabled = true },
+		explorer = {
+			enabled = true,
+		},
 		dashboard = {
 			enabled = true,
 			sections = {
@@ -323,16 +326,17 @@ return {
            █████████ ██████████ █████████ █████ █████ ████ █████   
          ███████████ ███    ███ █████████ █████ █████ ████ █████  
         ██████  █████████████████████ ████ █████ █████ ████ ██████ 
-      ]],
+                ]],
 			},
-		},
-		explorer = {
-			enabled = true,
 		},
 		indent = { enabled = true },
 		input = { enabled = true },
 		image = { enabled = true },
 		picker = {
+			exclude = {
+				".git",
+				"node_modules",
+			},
 			enable = true,
 			layout = {
 				preset = "right",
