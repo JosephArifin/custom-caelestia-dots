@@ -12,6 +12,7 @@ require("snacks").setup({
         exclude = {
             ".git",
             "node_modules",
+            "out"
         },
         layout = {
             preset = "ivy_split",

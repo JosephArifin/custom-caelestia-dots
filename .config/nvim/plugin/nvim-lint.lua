@@ -6,7 +6,9 @@ vim.pack.add({
 
 local lint = require("lint")
 
-lint.linters_by_ft = {}
+lint.linters_by_ft = {
+    json = { "biomejs" }
+}
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertChange", "TextChanged" }, {
     callback = function()

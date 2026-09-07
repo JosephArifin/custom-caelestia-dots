@@ -7,5 +7,11 @@ require("tree-sitter-manager").setup({
         "javascript",
         "css",
         "json",
+        "c",
+        "cpp",
+        "cmake"
+    },
+    highlight = {
+        enable = true
     }
 })

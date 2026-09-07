@@ -10,5 +10,7 @@ require("conform").setup({
         lsp_format = "fallback"
     },
     formatters_by_ft = {
+        json = { "biome" },
+        html = { "superhtml" }
     }
 })
